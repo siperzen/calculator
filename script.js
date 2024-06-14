@@ -32,6 +32,19 @@ const seven = document.querySelector(".seven");
 const eight = document.querySelector(".eight");
 const nine = document.querySelector(".nine");
 //  make the resultdisplay show the clicked buttons
+
+let result = "0";
+// add up each clicked number to resultDisplay
 const resultDisplay = document.querySelector(".result-display");
+resultDisplay.textContent = result;
+one.addEventListener("click", () => {
+    result += "1";
+})
+
+const clearButton = document.querySelector(".clear-button");
+clearButton.addEventListener("click", () => {
+    resultDisplay.textContent = "";
+})
+
 
 
