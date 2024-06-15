@@ -19,7 +19,7 @@ let calculationOperator;
 let secondNumber;
 
 function operate(calculationOperator, firstNumber, secondNumber) {
-    add(firstNumber, secondNumber);
+    return calculationOperator(firstNumber, secondNumber)
 }
 
 const one = document.querySelector(".one");
@@ -33,18 +33,74 @@ const eight = document.querySelector(".eight");
 const nine = document.querySelector(".nine");
 //  make the resultdisplay show the clicked buttons
 
-let result = "0";
+let result = "";
+let calculationNumberOne
 // add up each clicked number to resultDisplay
 const resultDisplay = document.querySelector(".result-display");
-resultDisplay.textContent = result;
+
 one.addEventListener("click", () => {
     result += "1";
-})
+    resultDisplay.textContent = result;
+    console.log(result);
+});
+
+two.addEventListener("click", () => {
+    result += "2";
+    resultDisplay.textContent = result;
+    console.log(result);
+});
+
+three.addEventListener("click", () => {
+    result += "3";
+    resultDisplay.textContent = result;
+    console.log(result);
+});
+
+four.addEventListener("click", () => {
+    result += "4";
+    resultDisplay.textContent = result;
+    console.log(result);
+});
+
+five.addEventListener("click", () => {
+    result += "5";
+    resultDisplay.textContent = result;
+    console.log(result);
+});
+
+six.addEventListener("click", () => {
+    result += "6";
+    resultDisplay.textContent = result;
+    console.log(result);
+});
+
+seven.addEventListener("click", () => {
+    result += "7";
+    resultDisplay.textContent = result;
+    console.log(result);
+});
+
+eight.addEventListener("click", () => {
+    result += "8";
+    resultDisplay.textContent = result;
+    console.log(result);
+});
+
+nine.addEventListener("click", () => {
+    result += "9";
+    resultDisplay.textContent = result;
+    console.log(result);
+});
+
+
+
 
 const clearButton = document.querySelector(".clear-button");
 clearButton.addEventListener("click", () => {
-    resultDisplay.textContent = "";
+    result = "";    
 })
+
+
 
 
 
