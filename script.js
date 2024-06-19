@@ -19,7 +19,8 @@ let calculationOperator;
 let secondNumber;
 
 function operate(calculationOperator, firstNumber, secondNumber) {
-    return calculationOperator(firstNumber, secondNumber)
+    firstNumber = calculationOperator(firstNumber, secondNumber);
+    console.log(firstNumber);
 }
 
 
