@@ -1,17 +1,17 @@
-function add(a,b) {
-    return a + b;
+function add(firstNumber, secondNumber) {
+    return firstNumber + secondNumber;
 }
 
-function subtract(a,b) {
-    return a - b;
+function subtract(firstNumber, secondNumber) {
+    return firstNumber - secondNumber;
 }
 
-function multiply(a,b) {
-    return a * b;
+function multiply(firstNumber, secondNumber) {
+    return firstNumber * secondNumber;
 }
 
-function divide(a,b) {
-    return a / b;
+function divide(firstNumber, secondNumber) {
+    return firstNumber / secondNumber;
 }
 
 let firstNumber;
@@ -21,6 +21,7 @@ let secondNumber;
 function operate(calculationOperator, firstNumber, secondNumber) {
     return calculationOperator(firstNumber, secondNumber)
 }
+
 
 const one = document.querySelector(".one");
 const two = document.querySelector(".two");
@@ -96,6 +97,31 @@ equals.addEventListener("click", () => {
     if(firstNumber !== undefined && calculationOperator !== undefined && secondNumber !== undefined) {
         operate(calculationOperator, firstNumber, secondNumber);
     }
+})
+
+const addButton = document.querySelector(".add")
+addButton.addEventListener("click", () => {
+    firstNumber = Number(result)
+    calculationOperator = add;
+    console.log(calculationOperator);
+})
+
+const subtractButton = document.querySelector(".subtract")
+subtractButton.addEventListener("click", () => {
+    calculationOperator = subtract(firstNumber, secondNumber)
+    console.log(calculationOperator);
+})
+
+const multiplyButton = document.querySelector(".multiply")
+multiplyButton.addEventListener("click", () => {
+    calculationOperator = multiply(firstNumber, secondNumber)
+    console.log(calculationOperator);
+})
+
+const divideButton = document.querySelector(".divide")
+divideButton.addEventListener("click", () => {
+    calculationOperator = divide(firstNumber, secondNumber)
+    console.log(calculationOperator)
 })
 
 const clearButton = document.querySelector(".clear-button");
