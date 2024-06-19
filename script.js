@@ -34,77 +34,78 @@ const eight = document.querySelector(".eight");
 const nine = document.querySelector(".nine");
 //  make the resultdisplay show the clicked buttons
 
-let result = "";
+let currentNumber = "";
 // add up each clicked number to resultDisplay
 let resultDisplay = document.querySelector(".result-display");
 
 one.addEventListener("click", () => {
-    result += "1";
-    resultDisplay.textContent = result;
-    console.log(result);
+    currentNumber = "1";
+    resultDisplay.textContent = currentNumber;
+    console.log(currentNumber);
 });
 
 two.addEventListener("click", () => {
-    result += "2";
-    resultDisplay.textContent = result;
-    console.log(result);
+    currentNumber += "2";
+    resultDisplay.textContent = currentNumber;
+    console.log(currentNumber);
 });
 
 three.addEventListener("click", () => {
-    result += "3";
-    resultDisplay.textContent = result;
-    console.log(result);
+    currentNumber += "3";
+    resultDisplay.textContent = currentNumber;
+    console.log(currentNumber);
 });
 
 four.addEventListener("click", () => {
-    result += "4";
-    resultDisplay.textContent = result;
-    console.log(result);
+    currentNumber += "4";
+    resultDisplay.textContent = currentNumber;
+    console.log(currentNumber);
 });
 
 five.addEventListener("click", () => {
-    result += "5";
-    resultDisplay.textContent = result;
-    console.log(result);
+    currentNumber += "5";
+    resultDisplay.textContent = currentNumber;
+    console.log(currentNumber);
 });
 
 six.addEventListener("click", () => {
-    result += "6";
-    resultDisplay.textContent = result;
-    console.log(result);
+    currentNumber += "6";
+    resultDisplay.textContent = currentNumber;
+    console.log(currentNumber);
 });
 
 seven.addEventListener("click", () => {
-    result += "7";
-    resultDisplay.textContent = result;
-    console.log(result);
+    currentNumber += "7";
+    resultDisplay.textContent = currentNumber;
+    console.log(currentNumber);
 });
 
 eight.addEventListener("click", () => {
-    result += "8";
-    resultDisplay.textContent = result;
-    console.log(result);
+    currentNumber += "8";
+    resultDisplay.textContent = currentNumber;
+    console.log(currentNumber);
 });
 
 nine.addEventListener("click", () => {
-    result += "9";
-    resultDisplay.textContent = result;
-    console.log(result);
+    currentNumber += "9";
+    resultDisplay.textContent = currentNumber;
+    console.log(currentNumber);
 });
 
 const equals = document.querySelector(".equals");
 equals.addEventListener("click", () => {
-    if(firstNumber !== undefined && calculationOperator !== undefined && secondNumber !== undefined) {
-        operate(calculationOperator, firstNumber, secondNumber);
-    }
+    secondNumber = Number(currentNumber);
+    operate(calculationOperator, firstNumber, secondNumber)
 })
 
 const addButton = document.querySelector(".add")
 addButton.addEventListener("click", () => {
-    firstNumber = Number(result)
     calculationOperator = add;
-    console.log(calculationOperator);
+    firstNumber = Number(currentNumber);
+    console.log(firstNumber);
+    currentNumber = "";
 })
+
 
 const subtractButton = document.querySelector(".subtract")
 subtractButton.addEventListener("click", () => {
@@ -126,10 +127,13 @@ divideButton.addEventListener("click", () => {
 
 const clearButton = document.querySelector(".clear-button");
 clearButton.addEventListener("click", () => {
-    result = "";    
+    currentNumber = "";    
 })
 
 
+// if(firstNumber !== undefined && calculationOperator !== undefined && secondNumber !== undefined) {
+//    operate(calculationOperator, firstNumber, secondNumber);
+// }
 
 
 
