@@ -34,9 +34,8 @@ const nine = document.querySelector(".nine");
 //  make the resultdisplay show the clicked buttons
 
 let result = "";
-let calculationNumberOne
 // add up each clicked number to resultDisplay
-const resultDisplay = document.querySelector(".result-display");
+let resultDisplay = document.querySelector(".result-display");
 
 one.addEventListener("click", () => {
     result += "1";
@@ -92,13 +91,20 @@ nine.addEventListener("click", () => {
     console.log(result);
 });
 
-
-
+const equals = document.querySelector(".equals");
+equals.addEventListener("click", () => {
+    if(firstNumber !== undefined && calculationOperator !== undefined && secondNumber !== undefined) {
+        operate(calculationOperator, firstNumber, secondNumber);
+    }
+})
 
 const clearButton = document.querySelector(".clear-button");
 clearButton.addEventListener("click", () => {
     result = "";    
 })
+
+
+
 
 
 
