@@ -23,7 +23,6 @@ function operate(calculationOperator, firstNumber, secondNumber) {
     console.log(firstNumber);
 }
 
-
 const one = document.querySelector(".one");
 const two = document.querySelector(".two");
 const three = document.querySelector(".three");
@@ -128,7 +127,10 @@ divideButton.addEventListener("click", () => {
 
 const clearButton = document.querySelector(".clear-button");
 clearButton.addEventListener("click", () => {
-    currentNumber = "";    
+    currentNumber = "";
+    firstNumber = "";
+    secondNumber = "";
+    calculationOperator = "";    
 })
 
 
