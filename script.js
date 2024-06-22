@@ -39,7 +39,7 @@ let currentNumber = "";
 let resultDisplay = document.querySelector(".result-display");
 
 one.addEventListener("click", () => {
-    currentNumber = "1";
+    currentNumber += "1";
     resultDisplay.textContent = currentNumber;
     console.log(currentNumber);
 });
