@@ -138,14 +138,3 @@ clearButton.addEventListener("click", () => {
     secondNumber = "";
     calculationOperator = "";    
 })
-
-
-// if(firstNumber !== undefined && calculationOperator !== undefined && secondNumber !== undefined) {
-//    operate(calculationOperator, firstNumber, secondNumber);
-// }
-
-
-
-
-
-
