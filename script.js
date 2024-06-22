@@ -19,8 +19,7 @@ let calculationOperator;
 let secondNumber;
 
 function operate(calculationOperator, firstNumber, secondNumber) {
-    firstNumber = calculationOperator(firstNumber, secondNumber);
-    console.log(firstNumber);
+    return calculationOperator(firstNumber, secondNumber);
 }
 
 const one = document.querySelector(".one");
@@ -95,7 +94,8 @@ nine.addEventListener("click", () => {
 const equals = document.querySelector(".equals");
 equals.addEventListener("click", () => {
     secondNumber = Number(currentNumber);
-    operate(calculationOperator, firstNumber, secondNumber)
+    currentNumber = operate(calculationOperator, firstNumber, secondNumber);
+    console.log(currentNumber);
 })
 
 const addButton = document.querySelector(".add")
