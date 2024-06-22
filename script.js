@@ -109,20 +109,26 @@ addButton.addEventListener("click", () => {
 
 const subtractButton = document.querySelector(".subtract")
 subtractButton.addEventListener("click", () => {
-    calculationOperator = subtract(firstNumber, secondNumber)
-    console.log(calculationOperator);
+    calculationOperator = subtract;
+    firstNumber = Number(currentNumber);
+    console.log(firstNumber);
+    currentNumber = "";
 })
 
 const multiplyButton = document.querySelector(".multiply")
 multiplyButton.addEventListener("click", () => {
-    calculationOperator = multiply(firstNumber, secondNumber)
-    console.log(calculationOperator);
+    calculationOperator = multiply;
+    firstNumber = Number(currentNumber);
+    console.log(firstNumber);
+    currentNumber = "";
 })
 
 const divideButton = document.querySelector(".divide")
 divideButton.addEventListener("click", () => {
-    calculationOperator = divide(firstNumber, secondNumber)
-    console.log(calculationOperator)
+    calculationOperator = divide;
+    firstNumber = Number(currentNumber);
+    console.log(firstNumber);
+    currentNumber = "";
 })
 
 const clearButton = document.querySelector(".clear-button");
