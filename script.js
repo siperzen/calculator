@@ -96,6 +96,7 @@ equals.addEventListener("click", () => {
     secondNumber = Number(currentNumber);
     currentNumber = operate(calculationOperator, firstNumber, secondNumber);
     console.log(currentNumber);
+    resultDisplay.textContent = currentNumber
 })
 
 const addButton = document.querySelector(".add")
