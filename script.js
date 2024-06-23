@@ -31,6 +31,7 @@ const six = document.querySelector(".six");
 const seven = document.querySelector(".seven");
 const eight = document.querySelector(".eight");
 const nine = document.querySelector(".nine");
+const zero = document.querySelector(".zero");
 //  make the resultdisplay show the clicked buttons
 
 let currentNumber = "";
@@ -91,6 +92,12 @@ nine.addEventListener("click", () => {
     console.log(currentNumber);
 });
 
+zero.addEventListener("click", () => {
+    currentNumber += "0";
+    resultDisplay.textContent = currentNumber;
+    console.log(currentNumber);
+});
+
 const equals = document.querySelector(".equals");
 equals.addEventListener("click", () => {
     secondNumber = Number(currentNumber);
@@ -132,10 +139,11 @@ divideButton.addEventListener("click", () => {
     currentNumber = "";
 })
 
-const clearButton = document.querySelector(".clear-button");
+const clearButton = document.querySelector("button.clear");
 clearButton.addEventListener("click", () => {
     currentNumber = "";
     firstNumber = "";
     secondNumber = "";
     calculationOperator = "";    
 })
+
