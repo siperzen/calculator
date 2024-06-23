@@ -32,6 +32,7 @@ const seven = document.querySelector(".seven");
 const eight = document.querySelector(".eight");
 const nine = document.querySelector(".nine");
 const zero = document.querySelector(".zero");
+const decimal = document.querySelector(".decimal");
 //  make the resultdisplay show the clicked buttons
 
 let currentNumber = "";
@@ -97,6 +98,12 @@ zero.addEventListener("click", () => {
     resultDisplay.textContent = currentNumber;
     console.log(currentNumber);
 });
+
+decimal.addEventListener("click", () => {
+    currentNumber += ".";
+    resultDisplay.textContent = currentNumber;
+    console.log(currentNumber);
+})
 
 const equals = document.querySelector(".equals");
 equals.addEventListener("click", () => {
