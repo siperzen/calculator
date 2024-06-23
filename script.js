@@ -104,18 +104,23 @@ decimal.addEventListener("click", () => {
         currentNumber += "0.";
         console.log(currentNumber)
         resultDisplay.textContent = currentNumber;
-    } else {
+    } else if(currentNumber.includes(".")) {
+        currentNumber += "";
+        console.log(currentNumber);
+        resultDisplay.textContent = currentNumber;
+    }
+    else {
     currentNumber += ".";
     resultDisplay.textContent = currentNumber;
     console.log(currentNumber);
-    };
+    }
 })
 
 const equals = document.querySelector(".equals");
 equals.addEventListener("click", () => {
     secondNumber = Number(currentNumber);
     currentNumber = operate(calculationOperator, firstNumber, secondNumber);
-    if(currentNumber === Infinity) {
+    if(currentNumber === Infinity || currentNumber == -Infinity) {
         resultDisplay.textContent = "stoopid";
         currentNumber = "stoopid";
     } else {
