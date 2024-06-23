@@ -102,8 +102,13 @@ const equals = document.querySelector(".equals");
 equals.addEventListener("click", () => {
     secondNumber = Number(currentNumber);
     currentNumber = operate(calculationOperator, firstNumber, secondNumber);
-    resultDisplay.textContent = currentNumber
-})
+    if(currentNumber === Infinity) {
+        resultDisplay.textContent = "stoopid";
+        currentNumber = "stoopid";
+    } else {
+        resultDisplay.textContent = currentNumber;
+}
+});
 
 const addButton = document.querySelector(".add")
 addButton.addEventListener("click", () => {
