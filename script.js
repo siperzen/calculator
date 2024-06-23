@@ -100,9 +100,15 @@ zero.addEventListener("click", () => {
 });
 
 decimal.addEventListener("click", () => {
+    if(currentNumber === "") {
+        currentNumber += "0.";
+        console.log(currentNumber)
+        resultDisplay.textContent = currentNumber;
+    } else {
     currentNumber += ".";
     resultDisplay.textContent = currentNumber;
     console.log(currentNumber);
+    };
 })
 
 const equals = document.querySelector(".equals");
