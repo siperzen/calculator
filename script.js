@@ -102,7 +102,6 @@ const equals = document.querySelector(".equals");
 equals.addEventListener("click", () => {
     secondNumber = Number(currentNumber);
     currentNumber = operate(calculationOperator, firstNumber, secondNumber);
-    console.log(currentNumber);
     resultDisplay.textContent = currentNumber
 })
 
@@ -139,11 +138,15 @@ divideButton.addEventListener("click", () => {
     currentNumber = "";
 })
 
-const clearButton = document.querySelector("button.clear");
+const clearButton = document.querySelector(".clear-button");
 clearButton.addEventListener("click", () => {
     currentNumber = "";
     firstNumber = "";
     secondNumber = "";
-    calculationOperator = "";    
+    calculationOperator = "";
+    resultDisplay.textContent = " ";    
 })
+
+
+// Round answers with long decimals
 
