@@ -120,7 +120,19 @@ const equals = document.querySelector(".equals");
 equals.addEventListener("click", () => {
     secondNumber = Number(currentNumber);
     currentNumber = operate(calculationOperator, firstNumber, secondNumber);
-    currentNumber = currentNumber.toFixed(7);
+    // if there are more than 7 numbers in the decimal part of the 
+    // result, round it to 7 numbers in the decimal part
+    const stringCurrentNumber = currentNumber.toString();
+    if (stringCurrentNumber.includes(".")) {
+        const splittedCurrentNumber = stringCurrentNumber.split(".");
+        const integralNumber = splittedCurrentNumber[0];
+        let sevenDecimals;
+        if(splittedCurrentNumber[1].length > 7) {
+            sevenDecimals = splittedCurrentNumber[1].split("")
+            .splice(0,7).join("")
+            currentNumber = integralNumber.concat(".", sevenDecimals);
+        }
+    }
     console.log(typeof currentNumber);
     if(currentNumber === Infinity || currentNumber == -Infinity) {
         resultDisplay.textContent = "stoopid";
