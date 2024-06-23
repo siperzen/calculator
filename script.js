@@ -120,6 +120,8 @@ const equals = document.querySelector(".equals");
 equals.addEventListener("click", () => {
     secondNumber = Number(currentNumber);
     currentNumber = operate(calculationOperator, firstNumber, secondNumber);
+    currentNumber = currentNumber.toFixed(7);
+    console.log(typeof currentNumber);
     if(currentNumber === Infinity || currentNumber == -Infinity) {
         resultDisplay.textContent = "stoopid";
         currentNumber = "stoopid";
