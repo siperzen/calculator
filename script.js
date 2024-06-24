@@ -33,6 +33,7 @@ const eight = document.querySelector(".eight");
 const nine = document.querySelector(".nine");
 const zero = document.querySelector(".zero");
 const decimal = document.querySelector(".decimal");
+const plusMinus = document.querySelector(".plus-minus");
 //  make the resultdisplay show the clicked buttons
 
 let currentNumber = "";
