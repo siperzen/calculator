@@ -45,6 +45,49 @@ one.addEventListener("click", () => {
     console.log(currentNumber);
 });
 
+document.addEventListener("keydown", (e) => {
+    if(e.code == "Digit1") {
+    currentNumber += "1";
+    resultDisplay.textContent = currentNumber;
+    } else if(e.code == "Digit2") {
+    currentNumber += "2";
+    resultDisplay.textContent = currentNumber;
+    } else if(e.code == "Digit3") {
+        currentNumber += "3";
+        resultDisplay.textContent = currentNumber;
+    } else if(e.code == "Digit4") {
+        currentNumber += "4";
+        resultDisplay.textContent = currentNumber;
+    } else if(e.code == "Digit5") {
+        currentNumber += "5";
+        resultDisplay.textContent = currentNumber;
+    } else if(e.code == "Digit6") {
+        currentNumber += "6";
+        resultDisplay.textContent = currentNumber;
+    } else if(e.code == "Digit7") {
+        currentNumber += "7";
+        resultDisplay.textContent = currentNumber;
+    } else if(e.code == "Digit8") {
+        currentNumber += "8";
+        resultDisplay.textContent = currentNumber;
+    } else if(e.code == "Digit9") {
+        currentNumber += "9";
+        resultDisplay.textContent = currentNumber;
+    } else if(e.code == "Digit0") {
+        currentNumber += "0";
+        resultDisplay.textContent = currentNumber;
+    } else if(e.code == "Period") {
+        if(currentNumber === "") {
+            currentNumber += "0.";
+            console.log(currentNumber);
+            resultDisplay.textContent = currentNumber;
+        } else if(currentNumber.includes(".")) {
+            currentNumber += "";
+            console.log(currentNumber);
+            resultDisplay.textContent = currentNumber;
+        }
+}});
+
 two.addEventListener("click", () => {
     currentNumber += "2";
     resultDisplay.textContent = currentNumber;
@@ -133,7 +176,6 @@ equals.addEventListener("click", () => {
             currentNumber = integralNumber.concat(".", sevenDecimals);
         }
     }
-    console.log(typeof currentNumber);
     if(currentNumber === Infinity || currentNumber == -Infinity) {
         resultDisplay.textContent = "stoopid";
         currentNumber = "stoopid";
@@ -184,6 +226,28 @@ clearButton.addEventListener("click", () => {
     resultDisplay.textContent = " ";    
 })
 
-
+function equalize() {
+    econdNumber = Number(currentNumber);
+    currentNumber = operate(calculationOperator, firstNumber, secondNumber);
+    // if there are more than 7 numbers in the decimal part of the 
+    // result, round it to 7 numbers in the decimal part
+    const stringCurrentNumber = currentNumber.toString();
+    if (stringCurrentNumber.includes(".")) {
+        const splittedCurrentNumber = stringCurrentNumber.split(".");
+        const integralNumber = splittedCurrentNumber[0];
+        let sevenDecimals;
+        if(splittedCurrentNumber[1].length > 7) {
+            sevenDecimals = splittedCurrentNumber[1].split("")
+            .splice(0,7).join("")
+            currentNumber = integralNumber.concat(".", sevenDecimals);
+        }
+    }
+    if(currentNumber === Infinity || currentNumber == -Infinity) {
+        resultDisplay.textContent = "stoopid";
+        currentNumber = "stoopid";
+    } else {
+        resultDisplay.textContent = currentNumber;
+}
+}
 // Round answers with long decimals
 
