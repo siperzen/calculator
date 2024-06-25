@@ -119,7 +119,10 @@ decimal.addEventListener("click", () => {
 
 plusMinus.addEventListener("click", () => {
     if(currentNumber.charAt(0) !== "-") {
-        "-" + currentNumber;
+        resultDisplay.textContent = "-" + currentNumber;
+        currentNumber = "-" + currentNumber;
+    } else if (currentNumber.charAt(0) === "-") {
+        currentNumber = currentNumber.replace("-", "");
         resultDisplay.textContent = currentNumber;
     }
 })
