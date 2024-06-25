@@ -117,6 +117,13 @@ decimal.addEventListener("click", () => {
     }
 })
 
+plusMinus.addEventListener("click", () => {
+    if(currentNumber.charAt(0) !== "-") {
+        "-" + currentNumber;
+        resultDisplay.textContent = currentNumber;
+    }
+})
+
 document.addEventListener("keydown", (e) => {
     if(e.code == "Digit1") {
     currentNumber += "1";
@@ -230,8 +237,6 @@ clearButton.addEventListener("click", () => {
 function equalize() {
     econdNumber = Number(currentNumber);
     currentNumber = operate(calculationOperator, firstNumber, secondNumber);
-    // if there are more than 7 numbers in the decimal part of the 
-    // result, round it to 7 numbers in the decimal part
     const stringCurrentNumber = currentNumber.toString();
     if (stringCurrentNumber.includes(".")) {
         const splittedCurrentNumber = stringCurrentNumber.split(".");
@@ -250,5 +255,5 @@ function equalize() {
         resultDisplay.textContent = currentNumber;
 }
 }
-// Round answers with long decimals
+
 
