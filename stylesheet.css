@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 400px;
+}
+
+.result {
+    display: flex;
+    justify-content: end;
+    background-color: darkgray;
+}
+
+.clear, .plus-minus {
+    background-color: grey;
+    color: white;
+}
+
+.divide {
+    background-color: #F28C28;
+    color: white
+}
+
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine {
+    background-color: #28282B;
+    color: white;
+}
+
+.operations button {
+    background-color: #F28C28;
+    color: white;
+}
+
