@@ -1,15 +1,27 @@
+body {
+    font-family: Georgia, serif;
+}
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 600px;
+}
+
+.calculator {
+    height: 550px;
     width: 400px;
 }
 
+
+
 .result {
     display: flex;
+    align-items: center;
     justify-content: end;
     background-color: darkgray;
+    height: 75px;
+    font-size: 48px
 }
 
 .clear, .plus-minus {
