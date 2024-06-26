@@ -34,10 +34,8 @@ const nine = document.querySelector("#nine");
 const zero = document.querySelector("#zero");
 const decimal = document.querySelector(".decimal");
 const plusMinus = document.querySelector(".plus-minus");
-//  make the resultdisplay show the clicked buttons
 
 let currentNumber = "";
-// add up each clicked number to resultDisplay
 let resultDisplay = document.querySelector(".result-display");
 
 one.addEventListener("click", () => {
@@ -258,5 +256,3 @@ function equalize() {
         resultDisplay.textContent = currentNumber;
 }
 }
-
-
