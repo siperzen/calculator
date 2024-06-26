@@ -40,12 +40,12 @@ button {
 #zero {
     flex-grow: 2;
     border-radius: 0 0 0 20px;
+    width: 200px
 }
 
 .clear-button, .plus-minus {
-    flex-grow: 2;
     background-color: #343434;
-    width: 100px;
+    width: 150px;
 }
 
 .first-row, .second-row, .third-row, .fourth-row, .fifth-row {
