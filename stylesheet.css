@@ -99,4 +99,12 @@ button {
     border-radius: 0 0 20px 0;
 }
 
-
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-top: 25px;
+    color: black;
+    font-style: italic;
+    font-size: 20px;
+}
