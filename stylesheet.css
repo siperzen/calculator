@@ -13,7 +13,15 @@ body {
     width: 400px;
 }
 
-button {
+.number {
+    flex-grow: 1
+}
+
+.clear-button, .plus-minus {
+    flex-grow: 2
+}
+
+.decimal {
     flex-grow: 1
 }
 
