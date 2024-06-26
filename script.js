@@ -22,16 +22,16 @@ function operate(calculationOperator, firstNumber, secondNumber) {
     return calculationOperator(firstNumber, secondNumber);
 }
 
-const one = document.querySelector(".one");
-const two = document.querySelector(".two");
-const three = document.querySelector(".three");
-const four = document.querySelector(".four");
-const five = document.querySelector(".five");
-const six = document.querySelector(".six");
-const seven = document.querySelector(".seven");
-const eight = document.querySelector(".eight");
-const nine = document.querySelector(".nine");
-const zero = document.querySelector(".zero");
+const one = document.querySelector("#one"); 
+const two = document.querySelector("#two");
+const three = document.querySelector("#three");
+const four = document.querySelector("#four");
+const five = document.querySelector("#five");
+const six = document.querySelector("#six");
+const seven = document.querySelector("#seven");
+const eight = document.querySelector("#eight");
+const nine = document.querySelector("#nine");
+const zero = document.querySelector("#zero");
 const decimal = document.querySelector(".decimal");
 const plusMinus = document.querySelector(".plus-minus");
 //  make the resultdisplay show the clicked buttons
@@ -170,7 +170,7 @@ document.addEventListener("keydown", (e) => {
         }
 }});
 
-const equals = document.querySelector(".equals");
+const equals = document.querySelector("#equals");
 equals.addEventListener("click", () => {
     secondNumber = Number(currentNumber);
     currentNumber = operate(calculationOperator, firstNumber, secondNumber);
@@ -195,7 +195,7 @@ equals.addEventListener("click", () => {
 }
 });
 
-const addButton = document.querySelector(".add")
+const addButton = document.querySelector("#add")
 addButton.addEventListener("click", () => {
     calculationOperator = add;
     firstNumber = Number(currentNumber);
@@ -204,7 +204,7 @@ addButton.addEventListener("click", () => {
 })
 
 
-const subtractButton = document.querySelector(".subtract")
+const subtractButton = document.querySelector("#subtract")
 subtractButton.addEventListener("click", () => {
     calculationOperator = subtract;
     firstNumber = Number(currentNumber);
@@ -212,7 +212,7 @@ subtractButton.addEventListener("click", () => {
     currentNumber = "";
 })
 
-const multiplyButton = document.querySelector(".multiply")
+const multiplyButton = document.querySelector("#multiply")
 multiplyButton.addEventListener("click", () => {
     calculationOperator = multiply;
     firstNumber = Number(currentNumber);
@@ -220,7 +220,7 @@ multiplyButton.addEventListener("click", () => {
     currentNumber = "";
 })
 
-const divideButton = document.querySelector(".divide")
+const divideButton = document.querySelector("#divide")
 divideButton.addEventListener("click", () => {
     calculationOperator = divide;
     firstNumber = Number(currentNumber);
