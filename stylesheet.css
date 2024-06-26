@@ -42,6 +42,7 @@ button {
     border: 1px black;
     border-style: solid;
 }
+
 .number {
     flex-grow: 1
 }
